@@ -3,6 +3,9 @@ import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import Footer from "./components/footer/Footer";
+import ListaCategorias from "./components/categoria/listacategoria/ListaCategorias";
+import DeletarCategoria from "./components/categoria/deletarcategoria/DeletarCategoria";
+import FormCategoria from "./components/categoria/formcategoria/FormCategoria";
 
 function App() {
   return (
@@ -14,6 +17,13 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
+              <Route path="/categorias" element={<ListaCategorias />} />
+              <Route path="/cadastrarcategoria" element={<FormCategoria />} />
+              <Route path="/editarcategoria/:id" element={<FormCategoria />} />
+              <Route
+                path="/deletarcategoria/:id"
+                element={<DeletarCategoria />}
+              />
             </Routes>
           </main>
           <Footer />
