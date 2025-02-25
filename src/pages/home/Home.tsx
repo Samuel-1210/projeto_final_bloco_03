@@ -1,3 +1,5 @@
+import ModalProduto from "../../components/produto/modalproduto/ModalProduto";
+
 function Home() {
   return (
     <>
@@ -9,7 +11,11 @@ function Home() {
                 Seja Bem Vindo(a)!
               </h2>
               <p className="text-xl">Remédio bom e barato é aqui</p>
-
+              <div id="" className="flex justify-around gap-4">
+                <div className="flex justify-around gap-4">
+                  <ModalProduto />
+                </div>
+              </div>
               <div id="" className="flex justify-around gap-4">
                 <div className="flex justify-around gap-4"></div>
               </div>

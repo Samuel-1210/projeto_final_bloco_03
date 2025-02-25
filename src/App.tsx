@@ -8,6 +8,9 @@ import DeletarCategoria from "./components/categoria/deletarcategoria/DeletarCat
 import FormCategoria from "./components/categoria/formcategoria/FormCategoria";
 import Perfil from "./pages/perfil/Perfil";
 import { ToastContainer } from "react-toastify";
+import DeletarProduto from "./components/produto/deletarproduto/DeletarProduto";
+import FormProduto from "./components/produto/formproduto/FormProduto";
+import ListaProdutos from "./components/produto/listaprodutos/ListaProdutos";
 
 function App() {
   return (
@@ -28,6 +31,10 @@ function App() {
                 element={<DeletarCategoria />}
               />
               <Route path="/perfil" element={<Perfil />} />
+              <Route path="/produtos" element={<ListaProdutos />} />
+              <Route path="/cadastrarproduto" element={<FormProduto />} />
+              <Route path="/editarproduto/:id" element={<FormProduto />} />
+              <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
             </Routes>
           </main>
           <Footer />
