@@ -6,10 +6,13 @@ import Footer from "./components/footer/Footer";
 import ListaCategorias from "./components/categoria/listacategoria/ListaCategorias";
 import DeletarCategoria from "./components/categoria/deletarcategoria/DeletarCategoria";
 import FormCategoria from "./components/categoria/formcategoria/FormCategoria";
+import Perfil from "./pages/perfil/Perfil";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <>
+      <ToastContainer />
       <BrowserRouter>
         <div className="flex flex-col min-h-screen">
           <Navbar />
@@ -24,6 +27,7 @@ function App() {
                 path="/deletarcategoria/:id"
                 element={<DeletarCategoria />}
               />
+              <Route path="/perfil" element={<Perfil />} />
             </Routes>
           </main>
           <Footer />

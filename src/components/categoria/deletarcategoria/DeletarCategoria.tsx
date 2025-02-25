@@ -4,6 +4,7 @@ import { buscar, deletar } from "../../../services/Service";
 import { RotatingLines } from "react-loader-spinner";
 import Categoria from "../../../models/Categoria";
 import { Check, X } from "@phosphor-icons/react";
+import { ToastAlerta } from "../../../util/ToastAlerta";
 
 function DeletarCategoria() {
   const navigate = useNavigate();
@@ -32,11 +33,11 @@ function DeletarCategoria() {
     try {
       await deletar(`/categorias/${id}`, {});
 
-      alert("Categoria apagado com sucesso");
+      ToastAlerta("Categoria apagada com sucesso", "info");
     } catch (error: any) {
       if (error.toString().includes("403")) {
       } else {
-        alert("Erro ao deletar o categoria.");
+        ToastAlerta("Erro ao deletar a categoria.", "error");
       }
     }
 

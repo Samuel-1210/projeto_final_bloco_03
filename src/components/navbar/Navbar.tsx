@@ -40,13 +40,17 @@ function Navbar() {
           <Link to="/cadastrarcategoria" className="hover:text-red-300">
             Cadastrar Categoria
           </Link>
-          <User className="hover:text-red-300 " size={32} weight="bold" />
+          <Link to="/perfil" className="hover:text-red-300">
+            <User className="hover:text-red-300 " size={32} weight="bold" />
+          </Link>
 
-          <ShoppingCart
-            className="hover:text-red-300 "
-            size={32}
-            weight="bold"
-          />
+          <Link to="/" className="hover:text-red-300">
+            <ShoppingCart
+              className="hover:text-red-300 "
+              size={32}
+              weight="bold"
+            />
+          </Link>
         </div>
       </div>
     </div>
